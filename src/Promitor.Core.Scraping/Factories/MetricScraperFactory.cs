@@ -33,6 +33,8 @@ namespace Promitor.Core.Scraping.Factories
                     return new GenericScraper(azureMetadata, metricDefaults, azureMonitorClient, logger, exceptionTracker);
                 case ResourceType.StorageQueue:
                     return new StorageQueueScraper(azureMetadata, metricDefaults, azureMonitorClient, logger, exceptionTracker);
+                case ResourceType.StorageFile:
+                    return new StorageFileScraper(azureMetadata, metricDefaults, azureMonitorClient, logger, exceptionTracker);
                 default:
                     throw new ArgumentOutOfRangeException();
             }

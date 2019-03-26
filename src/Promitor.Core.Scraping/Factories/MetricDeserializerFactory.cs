@@ -15,6 +15,8 @@ namespace Promitor.Core.Scraping.Factories
                     return new ServiceBusQueueMetricDeserializer();
                 case Configuration.Model.ResourceType.StorageQueue:
                     return new StorageQueueMetricDeserializer();
+                case Configuration.Model.ResourceType.StorageFile:
+                    return new StorageFileMetricDeserializer();
             }
 
             throw new ArgumentOutOfRangeException($@"Resource Type {resource} not supported.");

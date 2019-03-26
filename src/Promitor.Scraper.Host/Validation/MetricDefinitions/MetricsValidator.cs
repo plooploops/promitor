@@ -69,6 +69,10 @@ namespace Promitor.Scraper.Host.Validation.MetricDefinitions
                     var azureStorageQueueMetricValidator = new StorageQueueMetricValidator();
                     metricDefinitionValidationErrors = azureStorageQueueMetricValidator.Validate(metric as StorageQueueMetricDefinition);
                     break;
+                case ResourceType.StorageFile:
+                    var azureStorageFileMetricValidator = new StorageFileMetricValidator();
+                    metricDefinitionValidationErrors = azureStorageFileMetricValidator.Validate(metric as StorageFileMetricDefinition);
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(metric), metric.ResourceType, $"No validation rules are defined for metric type '{metric.ResourceType}'");
             }

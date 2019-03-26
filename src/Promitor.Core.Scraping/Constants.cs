@@ -4,7 +4,7 @@
     {
         public static class Defaults
         {
-            public const string MetricsDeclarationPath = "/config/metrics-declaration.yaml";
+            public const string MetricsDeclarationPath = @"C:\Users\angee\source\repos\promitor\samples\metrics-declaration-2.yaml";
         }
     }
 }
